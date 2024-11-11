@@ -2,19 +2,19 @@ local map = require("helpers.keys").map
 local noremap = require("helpers.keys").no_remap
 
 -- Blazingly fast way out of insert mode
-map("i", "jk", "<esc>")
+--map("i", "jj", "<esc>")
 
 -- Diagnostic keymaps
-map('n', 'gx', vim.diagnostic.open_float, "Show diagnostics under cursor")
+map('n', '<leader>dm', vim.diagnostic.open_float, "Show diagnostics under cursor")
 
 -- Easier access to beginning and end of lines
 map("n", "-", "$", "Go to end of line")
 
 -- Better window navigation
-map("n", "<C-h>", "<C-w><C-h>", "Navigate windows to the left")
-map("n", "<C-j>", "<C-w><C-j>", "Navigate windows down")
-map("n", "<C-k>", "<C-w><C-k>", "Navigate windows up")
-map("n", "<C-l>", "<C-w><C-l>", "Navigate windows to the right")
+--map("n", "<C-h>", "<C-w><C-h>", "Navigate windows to the left")
+--map("n", "<C-j>", "<C-w><C-j>", "Navigate windows down")
+--map("n", "<C-k>", "<C-w><C-k>", "Navigate windows up")
+--map("n", "<C-l>", "<C-w><C-l>", "Navigate windows to the right")
 
 -- Move with shift-arrows
 map("n", "<S-Left>", "<C-w><S-h>", "Move window to the left")
@@ -48,3 +48,10 @@ map("n", "<Esc>", "<cmd>nohl<cr>", "Clear highlights")
 -- Neotree
 map("n", "<C-e>",":Neotree toggle<Cr>", "Toggle file explorer")
 map("n", "<leader>nr",":Neotree reveal<Cr>", "Reveal file in neotree")
+
+-- Prettier
+map("n", "<leader>cf", ":Prettier<Cr>", "Code format")
+
+--Stuff
+--vim.lsp.buf.signature_help()
+
